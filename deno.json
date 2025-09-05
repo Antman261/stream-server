@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "dev": "deno serve --watch -R main.ts",
+    "serve": "deno --allow-net --allow-run main.ts",
+    "sim-test": "deno test --allow-net --allow-run"
+  },
+  "fmt": {"singleQuote": true},
+  "imports": {
+    "@antman/lifecycle": "jsr:@antman/lifecycle@^0.1.2",
+    "@antman/sim-test": "jsr:@antman/sim-test@^0.1.0",
+    "@hono/hono": "jsr:@hono/hono@^4.9.6",
+    "@preact/signals": "npm:@preact/signals@^2.3.1",
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/cli": "jsr:@std/cli@^1.0.22",
+    "@std/expect": "jsr:@std/expect@^1.0.17",
+    "@std/http": "jsr:@std/http@1"
+  }
+}

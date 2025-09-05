@@ -1,0 +1,64 @@
+:root {
+	font-family: "BlexMono Nerd Font Mono";
+	font-weight: 400;
+
+	color: #cfcfcf;
+	background: transparent;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	background: transparent;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.counter-wrapper {
+	border-radius: 8px;
+	background-color:hsl(274, 74%, 15%);
+	padding: 12px 14px;
+	transition: all 0.3s ease;
+}
+.counter-wrapper.updated {
+	background-color:hsl(342, 87%, 34%);
+	animation: jump-shaking 0.4s ease 0.1s;
+}
+
+@keyframes jump-shaking {
+	0% {
+		transform: translateX(0)
+	}
+
+	25% {
+		transform: translateY(-4px)
+	}
+
+	35% {
+		transform: translateY(-4px) rotate(9deg)
+	}
+
+	55% {
+		transform: translateY(-4px) rotate(-9deg)
+	}
+
+	65% {
+		transform: translateY(-4px) rotate(9deg)
+	}
+
+	75% {
+		transform: translateY(-4px) rotate(-9deg)
+	}
+
+	100% {
+		transform: translateY(0) rotate(0)
+	}
+}
