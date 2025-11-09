@@ -9,9 +9,9 @@ Deno.test(
   'Server starts up',
   withSim(async ({ simCtx }) => {
     const [server] = simCtx.serverInstances;
-    const { text } = await server.getText('/');
-    expect(text).toEqual('Hello Hono!');
-  }),
+    const { text } = await server.getText('/healthcheck');
+    expect(text).toEqual('OK');
+  })
 );
 
 Deno.test(
@@ -24,11 +24,11 @@ Deno.test(
     });
     expect(await server.post('/talon/counter/bees', {})).toEqual({
       status: 200,
-      json: undefined,
+      json: { value: 1 },
     });
     expect(await server.getText('/talon/counter/bees')).toEqual({
       status: 200,
       text: '1',
     });
-  }),
+  })
 );

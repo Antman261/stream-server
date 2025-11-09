@@ -1,8 +1,8 @@
-import { Lifecycle } from '@antman/lifecycle';
+import { newLifecycleRoot } from '@antman/lifecycle';
 import { webserver } from './src/webserver.ts';
 
 if (import.meta.main) {
-  const lifecycle = new Lifecycle();
+  const lifecycle = newLifecycleRoot();
   lifecycle.register(webserver);
   await lifecycle.start();
 }
